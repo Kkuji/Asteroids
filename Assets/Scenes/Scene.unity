@@ -721,6 +721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286685953}
   - component: {fileID: 1286685954}
+  - component: {fileID: 1286685955}
   m_Layer: 0
   m_Name: BorderLeft
   m_TagString: Border
@@ -769,6 +770,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.84, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &1286685955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286685952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6a665f3913caa4da6e6fafe21ce3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404615524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709525725}
   - component: {fileID: 1709525726}
+  - component: {fileID: 1709525727}
   m_Layer: 0
   m_Name: BorderRight
   m_TagString: Border
@@ -1079,6 +1093,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.84, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &1709525727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709525724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6a665f3913caa4da6e6fafe21ce3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1713959742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1942394884}
   - component: {fileID: 1942394885}
+  - component: {fileID: 1942394886}
   m_Layer: 0
   m_Name: BorderTop
   m_TagString: Border
@@ -1407,6 +1434,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &1942394886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942394883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6a665f3913caa4da6e6fafe21ce3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1956980622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,6 +1591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2031806253}
   - component: {fileID: 2031806252}
+  - component: {fileID: 2031806254}
   m_Layer: 0
   m_Name: BorderBot
   m_TagString: Border
@@ -1600,6 +1640,18 @@ Transform:
   m_Father: {fileID: 136215686}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2031806254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031806251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6a665f3913caa4da6e6fafe21ce3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6346543295279601613
 PrefabInstance:
   m_ObjectHideFlags: 0

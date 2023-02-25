@@ -11,12 +11,12 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Border"))
+        if (other.gameObject.GetComponent<TeleportationBorder>() != null)
         {
             Destroy(gameObject);
         }
 
-        if (other.CompareTag("Meteorite"))
+        if (other.gameObject.GetComponent<Meteorite>() != null)
         {
             source.PlayOneShot(_explosionAudio, _explosionAudioVolume);
             Instantiate(_explosion, transform.position, Quaternion.identity);

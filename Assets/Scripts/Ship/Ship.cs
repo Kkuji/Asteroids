@@ -18,12 +18,12 @@ public class Ship : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Border"))
+        if (other.gameObject.GetComponent<TeleportationBorder>() != null)
         {
             OnShipCollidedBorderAction?.Invoke(other.gameObject);
         }
 
-        if (other.CompareTag("Meteorite"))
+        if (other.gameObject.GetComponent<Meteorite>() != null)
         {
             if (_score.health > 1)
             {

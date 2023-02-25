@@ -10,6 +10,7 @@ public class UIdata : MonoBehaviour
     [SerializeField] private GameObject _losePanel;
 
     private int _score;
+    private int _healthAmount = 3;
     private float _minutes;
     private float _seconds;
     private bool _lost = false;
@@ -28,7 +29,7 @@ public class UIdata : MonoBehaviour
     public void Reset()
     {
         _score = 0;
-        health = 3;
+        health = _healthAmount;
         UpdateText();
     }
 
