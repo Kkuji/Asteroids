@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Ship\ShipInput.cs" />
+    <Compile Include="Assets\Scripts\TeleportationBorder.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\Meteorite\MeteoriteMover.cs" />
     <Compile Include="Assets\Scripts\Laser.cs" />
@@ -65,7 +66,6 @@
     <Compile Include="Assets\Scripts\UI\UIdata.cs" />
     <Compile Include="Assets\Scripts\Meteorite\MeteoriteSpawner.cs" />
     <Compile Include="Assets\Scripts\Ship\Ship.cs" />
-    <Compile Include="Assets\Scripts\TeleportationBorder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -24,7 +24,7 @@ public class ShipInput : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             _laserShooted = true;
     }
 

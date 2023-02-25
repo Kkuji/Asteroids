@@ -3,7 +3,10 @@ using System.Collections;
 
 public class MeteoriteSpawner : MonoBehaviour
 {
+    [SerializeField] private float _endAngle;
+    [SerializeField] private float _startAngle;
     [SerializeField] private float _differenceInScale;
+    [SerializeField] private float _baseScaleMultiplier;
     [SerializeField] private float _minTimeSpawnMeteorite;
     [SerializeField] private float _maxTimeSpawnMeteorite;
     [SerializeField] private GameObject _meteorite;
@@ -22,19 +25,25 @@ public class MeteoriteSpawner : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        float angle = Random.Range(0, 360);
-        float scaleMultiplier = Random.Range(1 - _differenceInScale, 1 + _differenceInScale);
         float spawnTime = Random.Range(_minTimeSpawnMeteorite, _maxTimeSpawnMeteorite);
+        GameObject instantiatedMeteorite = InstantiateRandomMeteorite();
+        instantiatedMeteorite.GetComponent<Meteorite>().wholeBorderCollider = _wholeBordersCollider;
+
+        yield return new WaitForSeconds(spawnTime);
+        _spawnPosible = true;
+    }
+
+    private GameObject InstantiateRandomMeteorite()
+    {
+        float angle = Random.Range(_startAngle, _endAngle);
+        float scaleMultiplier = Random.Range(_baseScaleMultiplier - _differenceInScale, _baseScaleMultiplier + _differenceInScale);
 
         Vector2 meteoritePosition = RandomPointInBounds(_wholeBordersCollider);
         Quaternion meteoriteRotation = Quaternion.Euler(0f, 0f, angle);
         GameObject scaledMeteorite = Instantiate(_meteorite, meteoritePosition, meteoriteRotation);
-        scaledMeteorite.GetComponent<Meteorite>().wholeBorderCollider = _wholeBordersCollider;
-        scaledMeteorite.transform.localScale = new Vector3(scaledMeteorite.transform.localScale.x * scaleMultiplier,
-                                                           scaledMeteorite.transform.localScale.y * scaleMultiplier,
-                                                           scaledMeteorite.transform.localScale.z);
-        yield return new WaitForSeconds(spawnTime);
-        _spawnPosible = true;
+        scaledMeteorite.transform.localScale = new Vector2(scaledMeteorite.transform.localScale.x * scaleMultiplier,
+                                                           scaledMeteorite.transform.localScale.y * scaleMultiplier);
+        return scaledMeteorite;
     }
 
     private Vector2 RandomPointInBounds(PolygonCollider2D Collider)

@@ -826,7 +826,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86d2e8a9bfe0fc4cb2b2a82b88e979a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _endAngle: 0
+  _startAngle: 360
   _differenceInScale: 0.3
+  _baseScaleMultiplier: 1
   _minTimeSpawnMeteorite: 0.3
   _maxTimeSpawnMeteorite: 0.6
   _meteorite: {fileID: 1410304151085615555, guid: 11b9f2f144e4d144dbd685ab121773cb, type: 3}
