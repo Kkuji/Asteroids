@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Meteorite : MonoBehaviour
 {
-    [SerializeField] ParticleSystem _explosion;
+    [SerializeField] private ParticleSystem _explosion;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
