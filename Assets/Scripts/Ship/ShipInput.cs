@@ -54,8 +54,8 @@ public class ShipInput : MonoBehaviour
         Rigidbody2D laserRidgidbody = currentLaser.GetComponent<Rigidbody2D>();
 
         laserRidgidbody.AddRelativeForce(Vector2.up * _laserSpeed);
-        laserRidgidbody.GetComponent<Laser>().score = _score;
-        laserRidgidbody.GetComponent<Laser>().source = _indestructibleSource;
+        currentLaser.GetComponent<Laser>().score = _score;
+        currentLaser.GetComponent<Laser>().source = _indestructibleSource;
         _source.PlayOneShot(_shootAudio, _laserShootVolume);
         _laserShooted = false;
     }
