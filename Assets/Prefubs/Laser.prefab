@@ -137,9 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8781c629849a8c14a844143ecb56127e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosion: {fileID: 5977671160897661078, guid: ad9d1866801696e439447ac9ea41560f, type: 3}
   _explosionAudio: {fileID: 8300000, guid: 475b9ef158ae2424fa977611e169870b, type: 3}
-  _explosionAudioVolume: 0.3
+  _explosionAudioVolume: 0.2
   score: {fileID: 0}
   source: {fileID: 0}
 --- !u!82 &-8310878154779238073
