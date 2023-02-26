@@ -5,13 +5,14 @@ public class ShipInput : MonoBehaviour
     [SerializeField] private UIdata _score;
     [SerializeField] private GameObject _laser;
     [SerializeField] private AudioClip _shootAudio;
-    [SerializeField] private float _laserSpeed;
+    [SerializeField] private AudioSource _indestructibleSource;
     [SerializeField] private float _shipSpeed;
+    [SerializeField] private float _laserSpeed;
     [SerializeField] private float _rotatingSpeed;
     [SerializeField] private float _laserShootVolume;
 
-    private AudioSource _source;
     private Rigidbody2D _rb;
+    private AudioSource _source;
     private float _rotationAngle;
     private bool _laserShooted = false;
 
@@ -51,9 +52,10 @@ public class ShipInput : MonoBehaviour
     {
         GameObject currentLaser = Instantiate(_laser, transform.position, transform.rotation);
         Rigidbody2D laserRidgidbody = currentLaser.GetComponent<Rigidbody2D>();
+
         laserRidgidbody.AddRelativeForce(Vector2.up * _laserSpeed);
         laserRidgidbody.GetComponent<Laser>().score = _score;
-        laserRidgidbody.GetComponent<Laser>().source = _source;
+        laserRidgidbody.GetComponent<Laser>().source = _indestructibleSource;
         _source.PlayOneShot(_shootAudio, _laserShootVolume);
         _laserShooted = false;
     }

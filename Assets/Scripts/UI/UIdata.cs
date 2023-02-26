@@ -6,11 +6,11 @@ using TMPro;
 public class UIdata : MonoBehaviour
 {
     [SerializeField] private TMP_Text _text;
+    [SerializeField] private int _healthAmount;
     [SerializeField] private Button _restartButton;
     [SerializeField] private GameObject _losePanel;
 
     private int _score;
-    private int _healthAmount = 3;
     private float _minutes;
     private float _seconds;
     private bool _lost = false;
