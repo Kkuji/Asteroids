@@ -25,23 +25,18 @@ public class Ship : MonoBehaviour
 
         if (other.gameObject.GetComponent<Meteorite>() != null)
         {
-            if (_score.health > 1)
+            MeteoriteCollides();
+
+            if (_score.health == 0)
             {
-                MeteoriteCollides(other, other.transform);
-            }
-            else
-            {
-                MeteoriteCollides(other, transform);
                 Destroy(gameObject);
             }
         }
     }
 
-    private void MeteoriteCollides(Collider2D objectToDestroy, Transform explosionTransform)
+    private void MeteoriteCollides()
     {
-        Instantiate(_explosion, explosionTransform.position, Quaternion.identity);
         AudioSource.PlayClipAtPoint(_hitAudio, transform.position, _hitMeteoriteVolume);
-        Destroy(objectToDestroy.gameObject);
         _score.LoseHealth();
     }
 }

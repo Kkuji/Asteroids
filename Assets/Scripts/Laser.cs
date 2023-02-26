@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _explosion;
     [SerializeField] private AudioClip _explosionAudio;
     [SerializeField] private float _explosionAudioVolume;
 
@@ -18,14 +17,9 @@ public class Laser : MonoBehaviour
 
         if (other.gameObject.GetComponent<Meteorite>() != null)
         {
-            if (source != null)
-            {
-                source.PlayOneShot(_explosionAudio, _explosionAudioVolume);
-                Instantiate(_explosion, transform.position, Quaternion.identity);
-                Destroy(gameObject);
-                Destroy(other.gameObject);
-                score.Increment();
-            }
+            source.PlayOneShot(_explosionAudio, _explosionAudioVolume);
+            Destroy(gameObject);
+            score.Increment();
         }
     }
 }

@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100c063f85e69944087bf655dd2f0eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wholeBorderCollider: {fileID: 0}
+  _explosion: {fileID: 5977671160897661078, guid: ad9d1866801696e439447ac9ea41560f, type: 3}
 --- !u!114 &6077425867731036046
 MonoBehaviour:
   m_ObjectHideFlags: 0

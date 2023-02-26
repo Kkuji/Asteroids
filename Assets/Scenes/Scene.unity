@@ -551,7 +551,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 136215686}
-  - {fileID: 1404615526}
   - {fileID: 1555318473}
   - {fileID: 1277277056}
   m_Father: {fileID: 0}
@@ -654,8 +653,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1277277056}
   - component: {fileID: 1277277057}
+  - component: {fileID: 1277277058}
   m_Layer: 0
-  m_Name: WholeBorders
+  m_Name: MeteoriteSpawner
   m_TagString: WholeBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -669,12 +669,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277277055}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.04, z: 0}
-  m_LocalScale: {x: 0.97348, y: 0.97348, z: 0.97348}
+  m_LocalPosition: {x: 0.0046709, y: 0.040116, z: 0}
+  m_LocalScale: {x: 0.896502, y: 0.95626885, z: 0.95626885}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1195224433}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1277277057
 PolygonCollider2D:
@@ -701,16 +701,35 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -3.58254, y: 5.6971054}
-      - {x: -3.5735867, y: -5.6689954}
-      - {x: 3.664703, y: -5.6835713}
-      - {x: 3.7038996, y: 5.576224}
-      - {x: 3.4195423, y: 5.2828383}
-      - {x: 3.4073625, y: -5.4338865}
+    - - {x: -3.5114822, y: 5.547218}
+      - {x: -3.5202935, y: -5.6523414}
+      - {x: 3.45579, y: -5.5760145}
+      - {x: 3.3764741, y: 5.4251847}
+      - {x: 3.2241535, y: 5.28033}
+      - {x: 3.268024, y: -5.412115}
       - {x: -3.305355, y: -5.4439487}
       - {x: -3.268363, y: 5.3560452}
-      - {x: 3.3155687, y: 5.336931}
-      - {x: 3.5952122, y: 5.629242}
+      - {x: 3.1941836, y: 5.3217583}
+      - {x: 3.3503866, y: 5.463487}
+--- !u!114 &1277277058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277277055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86d2e8a9bfe0fc4cb2b2a82b88e979a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _endAngle: 0
+  _startAngle: 360
+  _differenceInScale: 0.3
+  _baseScaleMultiplier: 1
+  _minTimeSpawnMeteorite: 0.3
+  _maxTimeSpawnMeteorite: 0.6
+  _meteorite: {fileID: 1410304151085615555, guid: 11b9f2f144e4d144dbd685ab121773cb, type: 3}
 --- !u!1 &1286685952
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,58 +801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6a665f3913caa4da6e6fafe21ce3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1404615524
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1404615526}
-  - component: {fileID: 1404615527}
-  m_Layer: 0
-  m_Name: MeteoriteSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1404615526
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404615524}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1195224433}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1404615527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404615524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f86d2e8a9bfe0fc4cb2b2a82b88e979a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _endAngle: 0
-  _startAngle: 360
-  _differenceInScale: 0.3
-  _baseScaleMultiplier: 1
-  _minTimeSpawnMeteorite: 0.3
-  _maxTimeSpawnMeteorite: 0.6
-  _meteorite: {fileID: 1410304151085615555, guid: 11b9f2f144e4d144dbd685ab121773cb, type: 3}
-  _wholeBordersCollider: {fileID: 1277277057}
 --- !u!1 &1555318471
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,7 +883,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1195224433}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668219171
 GameObject:
@@ -1034,6 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1791719698}
+  _healthAmount: 3
   _restartButton: {fileID: 817741489}
   _losePanel: {fileID: 857330026}
   health: 0
@@ -1662,10 +1630,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6346543295004437044, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6346543295004437046, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
       propertyPath: _score
       value: 
       objectReference: {fileID: 1668219176}
+    - target: {fileID: 6346543295004437046, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: _indestructibleSource
+      value: 
+      objectReference: {fileID: 1195224434}
     - target: {fileID: 6346543295004437047, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
       propertyPath: _score
       value: 
@@ -1732,6 +1708,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346543295004437054, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346543295004437055, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346543295004437055, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

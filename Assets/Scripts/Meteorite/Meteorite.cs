@@ -2,11 +2,20 @@ using UnityEngine;
 
 public class Meteorite : MonoBehaviour
 {
-    [HideInInspector] public PolygonCollider2D wholeBorderCollider;
+    [SerializeField] ParticleSystem _explosion;
 
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (wholeBorderCollider.OverlapPoint(transform.position))
+        if (other.gameObject.GetComponent<TeleportationBorder>() != null)
+        {
             Destroy(gameObject);
+        }
+
+        if (other.gameObject.GetComponent<Laser>() != null ||
+            other.gameObject.GetComponent<Ship>() != null)
+        {
+            Instantiate(_explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

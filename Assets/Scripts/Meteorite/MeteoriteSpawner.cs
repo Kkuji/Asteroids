@@ -10,9 +10,14 @@ public class MeteoriteSpawner : MonoBehaviour
     [SerializeField] private float _minTimeSpawnMeteorite;
     [SerializeField] private float _maxTimeSpawnMeteorite;
     [SerializeField] private GameObject _meteorite;
-    [SerializeField] private PolygonCollider2D _wholeBordersCollider;
 
     private bool _spawnPosible = true;
+    private PolygonCollider2D _collider;
+
+    private void Start()
+    {
+        _collider = GetComponent<PolygonCollider2D>();
+    }
 
     private void Update()
     {
@@ -26,8 +31,7 @@ public class MeteoriteSpawner : MonoBehaviour
     IEnumerator Spawn()
     {
         float spawnTime = Random.Range(_minTimeSpawnMeteorite, _maxTimeSpawnMeteorite);
-        GameObject instantiatedMeteorite = InstantiateRandomMeteorite();
-        instantiatedMeteorite.GetComponent<Meteorite>().wholeBorderCollider = _wholeBordersCollider;
+        InstantiateRandomMeteorite();
 
         yield return new WaitForSeconds(spawnTime);
         _spawnPosible = true;
@@ -38,7 +42,7 @@ public class MeteoriteSpawner : MonoBehaviour
         float angle = Random.Range(_startAngle, _endAngle);
         float scaleMultiplier = Random.Range(_baseScaleMultiplier - _differenceInScale, _baseScaleMultiplier + _differenceInScale);
 
-        Vector2 meteoritePosition = RandomPointInBounds(_wholeBordersCollider);
+        Vector2 meteoritePosition = RandomPointInBounds(_collider);
         Quaternion meteoriteRotation = Quaternion.Euler(0f, 0f, angle);
         GameObject scaledMeteorite = Instantiate(_meteorite, meteoritePosition, meteoriteRotation);
         scaledMeteorite.transform.localScale = new Vector2(scaledMeteorite.transform.localScale.x * scaleMultiplier,
@@ -50,6 +54,7 @@ public class MeteoriteSpawner : MonoBehaviour
     {
         Vector2 randomPoint = new(Random.Range(Collider.bounds.min.x, Collider.bounds.max.x),
                                   Random.Range(Collider.bounds.min.y, Collider.bounds.max.y));
+
         return (Vector2)Collider.ClosestPoint(new Vector2(randomPoint.x, randomPoint.y));
     }
 }
