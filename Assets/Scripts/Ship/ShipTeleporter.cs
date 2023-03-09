@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class ShipTeleportation
+public class ShipTeleporter
 {
     [SerializeField] private GameObject _leftBorder;
     [SerializeField] private GameObject _rightBorder;

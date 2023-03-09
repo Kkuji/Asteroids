@@ -1622,18 +1622,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6346543295004437044, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 798564776785713696, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: _score
+      value: 
+      objectReference: {fileID: 1668219176}
+    - target: {fileID: 798564776785713696, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: _indestructibleSource
+      value: 
+      objectReference: {fileID: 1195224434}
     - target: {fileID: 6346543295004437046, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
       propertyPath: _score
       value: 
       objectReference: {fileID: 1668219176}
-    - target: {fileID: 6346543295004437046, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
-      propertyPath: _indestructibleSource
-      value: 
-      objectReference: {fileID: 1195224434}
     - target: {fileID: 6346543295004437047, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
       propertyPath: _score
       value: 
@@ -1700,14 +1700,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346543295004437054, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346543295004437055, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6346543295004437055, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
-      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -6,7 +6,7 @@ public class Ship : MonoBehaviour
     [SerializeField] private UIdata _score;
     [SerializeField] private AudioClip _hitAudio;
     [SerializeField] private ParticleSystem _explosion;
-    [SerializeField] private ShipTeleportation _teleporter;
+    [SerializeField] private ShipTeleporter _teleporter;
     [SerializeField] private float _hitMeteoriteVolume;
 
     public event Action<GameObject> OnShipCollidedBorderAction;

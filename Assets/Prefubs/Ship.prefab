@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6346543295004437052}
   - component: {fileID: 6346543295004437049}
   - component: {fileID: 6346543295004437046}
+  - component: {fileID: 798564776785713696}
   - component: {fileID: 6346543295004437047}
   - component: {fileID: 6346543295004437045}
   - component: {fileID: 6346543295004437044}
@@ -144,11 +145,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _score: {fileID: 0}
-  _laser: {fileID: 4459496233430445638, guid: cd402ae0c4fad0a4491ebb5a75d4e495, type: 3}
-  _shootAudio: {fileID: 8300000, guid: b783219c67ce45149b23af9af1e54f76, type: 3}
-  _laserSpeed: 500
   _shipSpeed: 1.2
   _rotatingSpeed: 170
+--- !u!114 &798564776785713696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346543295004437053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa431127e195d34099e2513e2c24158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _score: {fileID: 0}
+  _laser: {fileID: 4459496233430445638, guid: cd402ae0c4fad0a4491ebb5a75d4e495, type: 3}
+  _shootAudio: {fileID: 8300000, guid: b783219c67ce45149b23af9af1e54f76, type: 3}
+  _indestructibleSource: {fileID: 0}
+  _laserSpeed: 500
   _laserShootVolume: 0.2
 --- !u!114 &6346543295004437047
 MonoBehaviour:
