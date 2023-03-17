@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class ShipShooter : MonoBehaviour
 {
     [SerializeField] private UIdata _score;

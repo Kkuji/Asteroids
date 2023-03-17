@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Ship\ShipMover.cs" />
     <Compile Include="Assets\Scripts\TeleportationBorder.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Ship\ShipShooter.cs" />
     <Compile Include="Assets\Scripts\Meteorite\MeteoriteMover.cs" />
     <Compile Include="Assets\Scripts\Laser.cs" />
     <Compile Include="Assets\Scripts\Ship\ShipTeleporter.cs" />
@@ -66,7 +67,6 @@
     <Compile Include="Assets\Scripts\UI\UIdata.cs" />
     <Compile Include="Assets\Scripts\Meteorite\MeteoriteSpawner.cs" />
     <Compile Include="Assets\Scripts\Ship\Ship.cs" />
-    <Compile Include="Assets\Scripts\Ship\ShipShooter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

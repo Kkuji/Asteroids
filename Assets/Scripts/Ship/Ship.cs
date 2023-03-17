@@ -13,7 +13,7 @@ public class Ship : MonoBehaviour
 
     private void Start()
     {
-        _teleporter.SetShip(this);
+        _teleporter.AssignAction(this);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,5 +38,10 @@ public class Ship : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(_hitAudio, transform.position, _hitMeteoriteVolume);
         _score.LoseHealth();
+    }
+
+    private void OnDestroy()
+    {
+        _teleporter.UnassignAction(this);
     }
 }

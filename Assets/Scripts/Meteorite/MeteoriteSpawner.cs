@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(PolygonCollider2D))]
+
 public class MeteoriteSpawner : MonoBehaviour
 {
     [SerializeField] private float _endAngle;

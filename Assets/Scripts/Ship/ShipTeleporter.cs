@@ -12,11 +12,16 @@ public class ShipTeleporter
     private Ship _playerShip;
     private Transform _shipTransform;
 
-    public void SetShip(Ship _playerShip)
+    public void AssignAction(Ship _playerShip)
     {
         this._playerShip = _playerShip;
         _shipTransform = _playerShip.GetComponent<Transform>();
         this._playerShip.OnShipCollidedBorderAction += OnShipCollidedBorder;
+    }
+
+    public void UnassignAction(Ship _playerShip)
+    {
+        this._playerShip.OnShipCollidedBorderAction -= OnShipCollidedBorder;
     }
 
     private void OnShipCollidedBorder(GameObject border)

@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+
 public class ShipMover : MonoBehaviour
 {
     [SerializeField] private UIdata _score;
