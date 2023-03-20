@@ -1544,6 +1544,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956980622}
   m_CullTransparentMesh: 1
+--- !u!1 &1958423077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346543295004437053, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+  m_PrefabInstance: {fileID: 6346543295279601613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031806251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +1632,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1668219176}
     - target: {fileID: 798564776785713696, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: _amount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 798564776785713696, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: _placeToSpawn
+      value: 
+      objectReference: {fileID: 1958423077}
+    - target: {fileID: 798564776785713696, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
       propertyPath: _indestructibleSource
       value: 
       objectReference: {fileID: 1195224434}
@@ -1701,6 +1714,10 @@ PrefabInstance:
     - target: {fileID: 6346543295004437054, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346543295004437055, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df371f11edd910b4e9dfeefc7e2542b5, type: 3}

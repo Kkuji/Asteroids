@@ -12,13 +12,13 @@ public class Laser : MonoBehaviour
     {
         if (other.gameObject.GetComponent<TeleportationBorder>() != null)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         if (other.gameObject.GetComponent<Meteorite>() != null)
         {
             source.PlayOneShot(_explosionAudio, _explosionAudioVolume);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             score.Increment();
         }
     }

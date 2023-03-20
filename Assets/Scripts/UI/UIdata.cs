@@ -44,7 +44,7 @@ public class UIdata : MonoBehaviour
         health--;
         UpdateText();
 
-        if (health == 0)
+        if (health <= 0)
         {
             _losePanel.SetActive(true);
             _lost = true;

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class ShipShooter : MonoBehaviour
+public class ShipShooter : ObjectPool
 {
     [SerializeField] private UIdata _score;
     [SerializeField] private GameObject _laser;
@@ -11,10 +11,10 @@ public class ShipShooter : MonoBehaviour
     [SerializeField] private float _laserShootVolume;
 
     private AudioSource _source;
-    private bool _laserShooted = false;
 
     private void Start()
     {
+        Initialize(_laser);
         _source = GetComponent<AudioSource>();
     }
 
@@ -22,27 +22,28 @@ public class ShipShooter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _laserShooted = true;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (_laserShooted)
-        {
             CreateLaser();
         }
     }
 
     private void CreateLaser()
     {
-        GameObject currentLaser = Instantiate(_laser, transform.position, transform.rotation);
-        Rigidbody2D laserRidgidbody = currentLaser.GetComponent<Rigidbody2D>();
+        if (TryGetObject(out GameObject laser))
+        {
+            SetLaser(laser);
+        }
+    }
 
-        laserRidgidbody.AddRelativeForce(Vector2.up * _laserSpeed);
-        currentLaser.GetComponent<Laser>().score = _score;
-        currentLaser.GetComponent<Laser>().source = _indestructibleSource;
+    private void SetLaser(GameObject laser)
+    {
+        laser.SetActive(true);
+
+        laser.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        laser.GetComponent<Rigidbody2D>().AddForce(transform.up * _laserSpeed);
+
+        laser.GetComponent<Laser>().score = _score;
+        laser.GetComponent<Laser>().source = _indestructibleSource;
+
         _source.PlayOneShot(_shootAudio, _laserShootVolume);
-        _laserShooted = false;
     }
 }
